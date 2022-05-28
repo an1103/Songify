@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <!-- style sheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- font styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,500&display=swap"
+        rel="stylesheet">
+
+    <!-- font icons -->
+    <script src="https://kit.fontawesome.com/7de5598196.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+    <div id="page-container">
+        <div id="content-wrap">
+            <!-- Navbar -->
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container mx-auto">
+                    <a class="navbar-brand" href="/">
+                        Songify
+                    </a>
+                    <ul class="navbar-nav" style="flex-direction: row !important;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            {% block content %}
+
+            {% endblock %}
+        </div>
+
+        {% block footer %}
+
+        {% endblock %}
+    </div>
+
+    <!-- Script tags -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+</body>
+
+<style>
+    #page-container {
+        position: relative;
+        min-height: 100vh;
+    }
+
+    #content-wrap {
+        padding-bottom: 2.5rem;
+        /* Footer height */
+    }
+
+    /* navbar */
+    nav .navbar-brand {
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: 1.5em;
+    }
+
+    nav ul .navbar-nav {
+        flex-direction: row !important;
+    }
+
+    /* form */
+    #main-form #range-input{
+        margin: 30px 0;
+    }
+
+    /* results */
+    .results .results-header {
+        color: #ececec;
+        font-size: 2.5em;
+    }
+
+    .results .song a {
+        width: 800px;
+        display: inline-block;
+        margin-top: 20px;
+        background: #fff;
+        font-size: 18px;
+        color: #333;
+        padding: 13px 20px;
+        border: #ececec 1px dotted;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+
+    .main-footer{
+        padding: 30px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    .main-footer a{
+        color: #fff;
+    }
+</style>
+
+</html>

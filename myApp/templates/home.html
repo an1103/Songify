@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<div id="main-form">
+    <form name="post" action="{{ url_for('recommend') }}" method="POST" class="mx-auto form-playlist"
+        style="margin: auto; width: 80%; color: white;">
+        <br>
+        <input class="form-control" type="text" id="URL" name="URL" placeholder="enter playlist link">
+        <div id="range-input">
+            <label for="customRange" class="form-label">Number of songs to recommend: </label>
+            <input type="range" class="form-range" id="customRange" min="10" max="50" step="5"
+                onchange="this.nextElementSibling.value = this.value">
+            <input type="number" id="number_of_records" name="number_of_records" min="10" max="50">
+        </div>
+        <input type="submit" value="Recommend Songs" class="btn btn-lg btn-block btn-primary">
+    </form>
+</div>
+{% endblock %}
+
+{% block footer %}
+<footer class="main-footer bg-dark">
+    <a href="https://github.com/an1103/Songify">
+        <i class="fa fa-lg fa-brands fa-github"> GitHub </i>
+    </a>
+</footer>
+{% endblock %}
