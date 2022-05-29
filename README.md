@@ -3,7 +3,7 @@
 ## Introduction
 The aim of the project is to recommend songs on the basis of a given playlist. 
 
-## Web App Gallery
+## Web App Screenshots
 ![Screenshot 2022-05-29 at 6 34 08 PM](https://user-images.githubusercontent.com/72307161/170870285-ed9fffc5-e660-4893-922d-ffb6a7ca1715.png)
 ![Screenshot 2022-05-29 at 6 34 40 PM](https://user-images.githubusercontent.com/72307161/170870292-a48ac71f-cd0d-458c-8c7e-ce2ce2a9a544.png)
 ![Screenshot 2022-05-29 at 6 35 09 PM](https://user-images.githubusercontent.com/72307161/170870296-fe1e62dd-7cd7-4503-b90d-20c6050aa5b6.png)
